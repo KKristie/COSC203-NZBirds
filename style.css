@@ -72,7 +72,7 @@ aside {
     color: black;
     font-size: 10px;
     font-style: italic;
-    border: 1px solid rgba(3, 72, 6, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     
 }
 #search-bar > #search-button:hover {
@@ -91,14 +91,16 @@ aside {
     padding: 3px;
     background: white;
     border-radius: 5px;
+    color: rgb(0, 0, 0);
     box-shadow: inset var(--drop-shadow);
+
 }
 
 .dropbtn {
     background-color: white;
     width:200px;
     height:fit-content;
-    color: rgb(86, 85, 85);
+    color: rgb(0, 0, 0);
     text-align: left;
     padding: 3px;
     font-size: 10px;
@@ -263,10 +265,11 @@ section{
 }
 .flex-bird-container{
     display:flex;
-
+   
 }
 .flex-bird-container > div{
     position: relative;
+    flex: 0 1 30%;
 }
 .flex-bird-container > div:hover{
 
