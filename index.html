@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel="stylesheet">
+    <script defer src="birds.js"></script>
+    <title>Birds Of New Zealand</title>
+
+</head>
+<body>
+    <header>
+        <div>Birds of Aotearoa</div>
+    </header>
+
+    <aside class ="flex-container">
+        <div class="aside-text" id="filter-birds-text">Filter Birds</div>
+        <div class="aside-text">Search</div>
+        <div id="search-bar">
+            <input id="message-text" type="text" autocomplete="off" placeholder="message...">
+            <button id="search-button" type="submit">Find</button>
+        </div>
+        <div class="aside-text">Sort By</div>
+
+        <div class="dropdown">
+            <button onclick="dropDownFunction()" class="dropbtn">Default</button>
+            <div id="myDropdown" class="dropdown-content">
+              <button onclick = "loadBirdsOrdered('increasing-weight')">Increasing Weight</button>
+              <button onclick = "loadBirdsOrdered('decreasing-weight')">Decreasing Weight</button>
+              <button onclick = "loadBirdsOrdered('increasing-length')">Increasing Length</button>
+              <button onclick = "loadBirdsOrdered('decreasing-weight')">Decreasing Length</button>
+
+            </div>
+          </div>
+
+        <div class="aside-text">Conservation Status</div>
+        <div class="dropdown">
+            <button onclick="dropDownFunction2()" class="dropbtn">Status</button>
+            <div id="myDropdown2" class="dropdown-content">
+              <button onclick = "notThreatened()" class = "dropbuttonsize">Not Threatened</button>
+              <button onclick = "naturallyUncommon()" class = "dropbuttonsize">Naturally Uncommon</button>
+              <button onclick = "relict()" class = "dropbuttonsize">Relict</button>
+              <button onclick = "recovering()" class = "dropbuttonsize">Recovering</button>
+              <button onclick = "declining()" class = "dropbuttonsize">Declining</button>
+              <button onclick = "nationallyIncreasing()" class = "dropbuttonsize">Nationally Increasing</button>
+              <button onclick = "nationallyVulnerable()" class = "dropbuttonsize">Nationally Vulnerable</button>
+              <button onclick = "nationallyEndangered()" class = "dropbuttonsize">Nationally Endangered</button>
+              <button onclick = "nationallyCritical()" class = "dropbuttonsize">Nationally Critical</button>
+              <button onclick = "extinct()" class = "dropbuttonsize">Extinct</button>
+              <button onclick = "dataDeficient()" class = "dropbuttonsize">Data Deficient</button>
+            </div>
+          </div>
+
+        <button onclick= "fetchData()" class="aside-text" id="show-all-birds">Show All Birds</button>
+        <button onclick= "showRandomBird()" class="aside-text" id="show-random-birds">Random Bird Generator</button>
+
+
+        <div class="aside-text" id="conservation-status-text">Conservation Status</div>
+
+        <div class="conservation-section"> 
+            <div class="conservation-status" id = "not-threatened"></div>
+            <div class="conservation-status-label"> Not Threatened</div>
+            <div class="conservation-status" id = "naturally_uncommon"></div>
+            <div class="conservation-status-label"> Naturally Uncommon</div>
+            <div class="conservation-status" id = "relict"></div>
+            <div class="conservation-status-label"> Relict</div>
+            <div class="conservation-status" id = "recovering"></div>
+            <div class="conservation-status-label"> Recovering</div>
+            <div class="conservation-status" id = "declining"></div>
+            <div class="conservation-status-label"> Declining</div>
+            <div class="conservation-status" id = "nationally-increasing"></div>
+            <div class="conservation-status-label"> Nationally Increasing</div>
+            <div class="conservation-status" id = "nationally-vulnerable"></div>
+            <div class="conservation-status-label"> Nationally Vulnerable</div>
+            <div class="conservation-status" id = "nationally-endangered"></div>
+            <div class="conservation-status-label"> Nationally Endangered</div>
+            <div class="conservation-status" id = "nationally-critical"></div>
+            <div class="conservation-status-label"> Nationally Critical</div>
+            <div class="conservation-status" id = "extinct"></div>
+            <div class="conservation-status-label"> Extinct</div>
+            <div class="conservation-status" id = "data-deficient"></div>
+            <div class="conservation-status-label"> Data Deficient</div>
+        </div>
+        
+
+    </aside>
+        <section class="flex-bird-container">
+        <h1 class="fbheader" > ..</h1>
+    </section>
+
+    <footer class="disclaimer" >Data licensed from <a class= "footer_link" href="https://www.birdsnz.org.nz/">Birds New Zealand</a> for educational use withing the University of Otago</footer>
+
+</body>
+
+</html>
+/
